@@ -178,6 +178,13 @@ else:
 - LawBinder compliance ≥ 0.80
 - Uses: DriftLock, Scriptoria, LawBinder
 
+**philosophical-reasoning**
+- IRF-Calc v0.0.2: 6-component framework (M-A-D-I-F-P)
+- IRF global score ≥ 0.78, all components ≥ 0.70
+- DR3 decision protocol (Realism, Stability, Conservative Rationality)
+- Drift control: JSD ≤ 0.06, L2 ≤ 0.04
+- Uses: DriftLock, All validation components
+
 #### Writing Skills (3)
 
 **academic-writing**
@@ -266,6 +273,11 @@ else:
 | **FTRI** | ≥ 0.61 | (Existence + Accuracy + Evidence + Context) / 4 | fact-checking |
 | **Sentiment Confidence** | ≥ 0.75 | Multi-factor confidence calculation | sentiment-analysis |
 | **Definition Completeness** | ≥ 0.95 | Section completeness score | sovereign-definition |
+| **IRF Global Score** | ≥ 0.78 | s = (Π(ε + q_k))^(1/6), ε=0.001 | philosophical-reasoning |
+| **IRF Component (M/A/D/I/F/P)** | ≥ 0.70 each | Component-specific scoring | philosophical-reasoning |
+| **IRF JSD Drift** | ≤ 0.06 | JSD(p^(t1), p^(t2)) / log(2) | philosophical-reasoning |
+| **IRF L2 Drift** | ≤ 0.04 | \|\|q_bar^(t1) - q_bar^(t2)\|\|_2 | philosophical-reasoning |
+| **DR3 Axis Scores** | ≥ 0.60 each | Realism, Stability, Conservative Rationality | philosophical-reasoning |
 
 ## Integration Patterns
 

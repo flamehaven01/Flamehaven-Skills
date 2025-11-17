@@ -1,0 +1,231 @@
+# IRF-Calc v0.0.2 — Philosophical Algorithms for AI
+# REx Engine / ASDP Integration Helm Values
+
+irfCalc:
+  enabled: true
+  id: "irf_calc_philosophical_ai"
+  version: "0.0.2"
+  mode: "conservative"        # conservative | balanced | exploratory
+  description: >
+    IRF-Calc v0.0.2 is an integrated philosophical reasoning algorithm for AI.
+    It quantifies reasoning quality over six components (M,A,D,I,F,P),
+    controls drift and calibration, and adds a DR3 decision protocol layer
+    for conservative final choice.
+
+  # ─────────────────────────────────────
+  # 1. Component Definitions (0~1 continuous scores)
+  # ─────────────────────────────────────
+  components:
+    M:
+      id: "M"
+      name: "methodic_doubt"
+      desc: "Premise purification quality"
+    A:
+      id: "A"
+      name: "abduction"
+      desc: "Hypothesis generation quality"
+    D:
+      id: "D"
+      name: "deduction"
+      desc: "Deductive expansion quality"
+    I:
+      id: "I"
+      name: "induction"
+      desc: "Empirical consistency quality"
+    F:
+      id: "F"
+      name: "falsification"
+      desc: "Falsification rigor quality"
+    P:
+      id: "P"
+      name: "paradigm"
+      desc: "Paradigm alignment quality"
+
+  # ─────────────────────────────────────
+  # 2. IRF Scoring (continuous / integer)
+  # ─────────────────────────────────────
+  scoring:
+    epsilon: 0.001
+    formulaContinuous: |
+      # q_i = (M_i, A_i, D_i, I_i, F_i, P_i) in [0,1]^6
+      # s_i = IRF_score(h_i)
+      # s_i = (Π_k (epsilon + q_{i,k}))^(1/6)
+    formulaInteger:
+      component: |
+        # R_{i,k} in {0..10}
+        # R_{i,k} = round(10 * q_{i,k})
+      global: |
+        # R_i in {0..100}
+        # R_i = round(100 * s_i)
+
+  # ─────────────────────────────────────
+  # 3. Thresholds (philosophical quality gates)
+  # ─────────────────────────────────────
+  thresholds:
+    profiles:
+      conservative:
+        globalMin: 0.80
+      balanced:
+        globalMin: 0.78
+      exploratory:
+        globalMin: 0.75
+    effective:
+      globalMin: 0.78        # default: balanced
+      componentMin:
+        M: 0.70
+        A: 0.70
+        D: 0.70
+        I: 0.70
+        F: 0.70
+        P: 0.70
+
+  # ─────────────────────────────────────
+  # 4. Drift Control (IRF-DriftLock)
+  # ─────────────────────────────────────
+  drift:
+    jsd:
+      enabled: true
+      name: "drift_jsd_irf"
+      description: "Distribution-based IRF score drift (Jensen–Shannon, normalized [0,1])"
+      max: 0.06
+      alertLevels:
+        warning: 0.04
+        critical: 0.06
+      formula: |
+        # p_i^(t) = s_i^(t) / Σ_j s_j^(t)
+        # drift_jsd_irf = JSD(p^(t1), p^(t2)) / log(2)
+    l2:
+      enabled: true
+      name: "drift_l2_irf"
+      description: "Component mean vector based L2 drift"
+      max: 0.04
+      alertLevels:
+        warning: 0.03
+        critical: 0.04
+      formula: |
+        # q_bar^(t) = mean_i q_i^(t)
+        # drift_l2_irf = || q_bar^(t1) - q_bar^(t2) ||_2
+
+  # ─────────────────────────────────────
+  # 5. Calibration Gate (reference correlation)
+  # ─────────────────────────────────────
+  calibration:
+    enabled: true
+    name: "corr_irf_ref"
+    description: >
+      IRF score vs reference benchmark score
+      (arxiv-derived D/I/A + abduction + Socratic tasks)
+      Pearson correlation coefficient.
+    min: 0.90
+    alertLevels:
+      warning: 0.92
+      critical: 0.90
+    formula: |
+      # corr_irf_ref = Corr(y_t, y_hat_t)
+      # y_t      : reference (human/paper) score for task t
+      # y_hat_t  : IRF-based score
+
+  # ─────────────────────────────────────
+  # 6. Inference Controller (loop settings)
+  # ─────────────────────────────────────
+  inference:
+    maxCycles: 2
+    stopConditions:
+      - "exists(h_i: s_i >= thresholds.effective.globalMin AND all(q_{i,k} >= thresholds.effective.componentMin[k]))"
+      - "drift_jsd_irf <= drift.jsd.max"
+      - "drift_l2_irf <= drift.l2.max"
+    exportAsEnv: true
+    envPrefix: "IRF_LOOP_"
+
+  # ─────────────────────────────────────
+  # 7. Decision Layer (DR3_decision_protocol)
+  # ─────────────────────────────────────
+  decision:
+    protocol: "DR3_decision_protocol"
+    description: "Deductive + Inductive fusion with 3 candidate strategies and conservative final choice."
+    axes:
+      - "realism"
+      - "stability"
+      - "conservative_rationality"
+    weights:
+      realism: 0.4
+      stability: 0.4
+      conservative_rationality: 0.2
+    minAxisScore: 0.6
+    candidates: 3
+    mapping:
+      deductiveSources: ["D", "F"]     # deduction·falsification based
+      inductiveSources: ["A", "I"]     # hypothesis·induction based
+      metaSources: ["M", "P"]          # premise·paradigm (meta layer)
+    selectionRule: "select argmax_j score_j s.t. all(axis_score_j >= minAxisScore)"
+    fallbackRule: "abstain_and_request_more_evidence"
+    exportAsEnv: true
+    envPrefix: "IRF_DR3_"
+
+  # ─────────────────────────────────────
+  # 8. REx Engine Integration
+  # ─────────────────────────────────────
+  rex:
+    gate:
+      enabled: true
+      acceptIf:
+        irfScoreMin: 0.78
+        irfIntegerMin: 78
+      holdIf:
+        driftJsdOverWarning: 0.04
+        driftL2OverWarning: 0.03
+      rejectIf:
+        driftJsdOver: 0.06
+        driftL2Over: 0.04
+        corrRefBelow: 0.90
+    prometheus:
+      enabled: true
+      metricPrefix: "rex_irf"
+      metrics:
+        - name: "rex_irf_score"
+          help: "IRF global continuous score s_i"
+          type: "gauge"
+        - name: "rex_irf_score_int"
+          help: "IRF integer score R_i (0..100)"
+          type: "gauge"
+        - name: "rex_irf_drift_jsd"
+          help: "IRF drift JSD normalized"
+          type: "gauge"
+        - name: "rex_irf_drift_l2"
+          help: "IRF drift L2"
+          type: "gauge"
+        - name: "rex_irf_corr_ref"
+          help: "IRF vs reference correlation"
+          type: "gauge"
+        - name: "rex_irf_dr3_realism"
+          help: "DR3 realism axis score of selected candidate"
+          type: "gauge"
+        - name: "rex_irf_dr3_stability"
+          help: "DR3 stability axis score of selected candidate"
+          type: "gauge"
+        - name: "rex_irf_dr3_conservative_rationality"
+          help: "DR3 conservative rationality axis score"
+          type: "gauge"
+
+  # ─────────────────────────────────────
+  # 9. ASDP Integration
+  # ─────────────────────────────────────
+  asdp:
+    sovereignDef:
+      id: "irf_integrated_reasoning_framework"
+      version: "0.0.2"
+      registryRef: "asdp/definitions/irf_integrated_reasoning_framework.v0.0.2.yaml"
+    routing:
+      domain: "research-philosophy"
+      tags:
+        - "irf"
+        - "philosophical-reasoning"
+        - "ded-ind-abd"
+        - "driftlock"
+        - "dr3-decision"
+    policyBinding:
+      evidenceFirst: true
+      abstainOverFabricate: true
+      enforceDriftLimits: true
+      enforceCalibrationGate: true
+      enforceDecisionLayer: true

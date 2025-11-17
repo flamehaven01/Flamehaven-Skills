@@ -45,9 +45,9 @@ Flamehaven-Skills transforms AI execution through:
 
 You should see Flamehaven skills available for use.
 
-## Core Skills (15)
+## Core Skills (16)
 
-### 🧠 Thinking (4 skills)
+### 🧠 Thinking (5 skills)
 
 **sovereign-definition** - ASDP Intent→Definition→Execution pipeline
 - Compiles natural language into formal, executable specifications
@@ -60,6 +60,12 @@ You should see Flamehaven skills available for use.
 **strategic-consulting** - SUPREME-CONSULT framework
 - Constitutional Requirements mapping + BattleField diagnostics
 - Strategy drift D < 0.3 enforcement
+
+**philosophical-reasoning** - IRF-Calc v0.0.2 integrated reasoning
+- 6-component framework (M-A-D-I-F-P): Methodic doubt, Abduction, Deduction, Induction, Falsification, Paradigm alignment
+- IRF global score ≥ 0.78, all components ≥ 0.70 required
+- DR3 decision protocol with 3-axis validation (Realism, Stability, Conservative Rationality)
+- Drift control: JSD ≤ 0.06, L2 ≤ 0.04
 
 **sovereign-search** - Multi-modal document search with validation
 - Google FileSearch + Local RAG + Scriptoria Ω verification
@@ -166,6 +172,11 @@ All Flamehaven skills enforce quantitative thresholds:
 | **FTRI (Fact Trust)** | ≥ 0.61 | fact-checking |
 | **Sentiment Confidence** | ≥ 0.75 | sentiment-analysis |
 | **Definition Completeness** | ≥ 0.95 | sovereign-definition |
+| **IRF Global Score** | ≥ 0.78 | philosophical-reasoning |
+| **IRF Component (M/A/D/I/F/P)** | ≥ 0.70 each | philosophical-reasoning |
+| **IRF JSD Drift** | ≤ 0.06 | philosophical-reasoning |
+| **IRF L2 Drift** | ≤ 0.04 | philosophical-reasoning |
+| **DR3 Axis Scores** | ≥ 0.60 each | philosophical-reasoning |
 
 ## Quick Start Examples
 
@@ -225,6 +236,34 @@ Flamehaven:
 4. Uses document-quality for final report (Ω ≥ 0.90)
 
 Result: Validated research synthesis in fraction of sequential time
+```
+
+### Example 4: Philosophical Decision with IRF-Calc
+
+```
+User: "Should we pivot our SaaS to AI-native architecture?"
+
+Flamehaven:
+1. Uses philosophical-reasoning with full M-A-D-I-F-P analysis:
+   - M (Methodic Doubt): Extract premises (explicit + implicit), flag suspects
+   - A (Abduction): Generate 3 hypotheses (full rewrite, incremental, partner)
+   - D (Deduction): Derive logical consequences for each hypothesis
+   - I (Induction): Check empirical fit against pilot data
+   - F (Falsification): Generate adversarial tests, search counterexamples
+   - P (Paradigm): Assess alignment with "Cloud-first SaaS" paradigm
+
+2. IRF Score Calculation:
+   - M=0.75, A=0.78, D=0.82, I=0.77, F=0.78, P=0.76
+   - Global IRF = 0.79 ✓ (≥ 0.78 threshold)
+   - All components ≥ 0.70 ✓
+
+3. DR3 Decision Protocol:
+   - Realism (I,F): 0.78
+   - Stability (D,M): 0.81
+   - Conservative Rationality (A,P): 0.74
+   - Selected: "Incremental AI layer + 2-year roadmap"
+
+Result: Philosophically rigorous decision with full reasoning trace
 ```
 
 ## How It Works
