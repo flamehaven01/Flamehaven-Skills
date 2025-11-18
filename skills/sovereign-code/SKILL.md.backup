@@ -1,0 +1,187 @@
+---
+name: sovereign-code
+description: Meta-cognitive code generation with quality consciousness and self-evolution. Uses Sovereign Core foundation to generate code with 5D quality measurement (Correctness, Readability, Performance, Security, Maintainability), adaptive runtime selection, and F→A→S grade progression. Use when user requests code generation, function creation, API development, or says "코드 만들어줘", "함수 생성", "API 개발".
+---
+
+# Sovereign Code v1.0.0
+
+## Purpose
+
+Generate production-quality code with **meta-cognitive quality consciousness**. Every code generation is measured across 5 dimensions, graded automatically, and tracked for continuous evolution toward S-grade excellence.
+
+## When to Use
+
+- User requests code generation ("함수 만들어줘")
+- API or service development
+- Algorithm implementation
+- Code scaffolding
+- Feature implementation
+
+## Quality Dimensions (5D)
+
+**Formula**: Q = 0.30×Correctness + 0.25×Readability + 0.20×Performance + 0.15×Security + 0.10×Maintainability
+
+1. **Correctness (30%)**: Logic correctness, type safety, edge case handling
+2. **Readability (25%)**: Code clarity, naming, structure, documentation
+3. **Performance (20%)**: Time/space complexity, optimization
+4. **Security (15%)**: Vulnerability-free, OWASP compliance, input validation
+5. **Maintainability (10%)**: Modular design, testability, extensibility
+
+**Grading Scale**:
+- S-Grade (≥0.95): Exceptional - Production excellence
+- A-Grade (≥0.90): Excellent - Production ready
+- B-Grade (≥0.80): Good - Minor improvements needed
+
+## Workflow (CGE Pattern)
+
+```python
+User: "파일 업로드 API 만들어줘"
+
+Claude (Meta-Cognitive Process):
+
+[1. INTENT ANALYSIS]
+Task: File upload API
+Domain: Backend development
+Complexity: 0.68 (medium-high)
+Security critical: Yes
+
+[2. POLICY RESOLUTION]
+Mode: BALANCED
+Checks: [security, validation, error_handling, tests, docs]
+Framework: FastAPI (modern, async)
+
+[3. CODE GENERATION]
+[Generates code with quality focus...]
+
+[4. QUALITY MEASUREMENT]
+Quality Tensor (5D):
+- Correctness: 0.94 ✓
+- Readability: 0.91 ✓
+- Performance: 0.87 ✓
+- Security: 0.90 ⚠ (CSRF token recommended)
+- Maintainability: 0.89 ✓
+
+Grade: A (0.90)
+
+[5. EVOLUTION TRACKING]
+Saved to: .sovereign-meta/code_evolution_history.json
+Cycle: 1
+Trend: N/A (first cycle)
+
+[6. RECOMMENDATIONS]
+→ Add CSRF token validation for S-grade
+→ Consider rate limiting for production
+→ Add OpenAPI documentation
+
+[7. EXPLANATION]
+"A-grade 파일 업로드 API 생성 완료.
+ Security dimension에서 CSRF 토큰 추가를 권장합니다.
+ 다음 iteration에서 S-grade 달성 가능합니다."
+```
+
+## Adaptive Runtime
+
+**MINIMAL Mode** (complexity < 0.3):
+- Simple functions, utilities
+- Fast generation (5-10 seconds)
+- Basic validation only
+
+**BALANCED Mode** (complexity 0.3-0.7):
+- APIs, services, features
+- Complete validation (20-30 seconds)
+- Security + performance checks
+
+**STRICT Mode** (complexity > 0.7):
+- Critical systems, complex algorithms
+- Comprehensive validation (60+ seconds)
+- Security + performance + testing + profiling
+
+## Evolution Example
+
+```
+Cycle 1: Simple CRUD API
+Grade: B (0.82)
+- Correctness: 0.90
+- Readability: 0.75 ← weak
+- Performance: 0.85
+- Security: 0.80
+- Maintainability: 0.80
+
+Recommendations:
+→ Improve readability: Add docstrings, better naming
+→ Improve security: Add input validation
+
+[User applies recommendations]
+
+Cycle 2: Improved API with validations
+Grade: A (0.91)
+- Correctness: 0.92
+- Readability: 0.92 ← improved!
+- Performance: 0.87
+- Security: 0.90 ← improved!
+- Maintainability: 0.88
+
+Learning: "Quality improved by 10.9% (B → A)"
+Convergence: S-grade in 2 cycles (confidence: 87%)
+
+[Continue evolution...]
+
+Cycle 4: Production-ready API
+Grade: S (0.96)
+- All dimensions ≥ 0.95
+Convergence achieved!
+```
+
+## Token Optimization
+
+- **MINIMAL**: ~1,500 tokens (inline generation)
+- **BALANCED**: ~1,000 tokens (hybrid approach)
+- **STRICT**: ~600 tokens (CLI delegation)
+
+## Integration with Sovereign Core
+
+Automatically inherits:
+- CGE 8-step pattern
+- N-dimensional quality measurement
+- Evolution tracking
+- Convergence prediction
+- Trend analysis
+- Auto-recommendations
+
+## Storage
+
+```
+project/
+└── .sovereign-meta/
+    └── code_evolution_history.json
+```
+
+## Example Usage
+
+```
+User: "Redis 캐시 레이어 만들어줘"
+
+Claude: [sovereign-code activates]
+
+Result:
+- Generated: redis_cache.py (150 lines)
+- Quality: A-grade (0.92)
+- Dimensions:
+  * Correctness: 0.95 (type hints, error handling)
+  * Readability: 0.93 (clear structure, docstrings)
+  * Performance: 0.88 (connection pooling)
+  * Security: 0.92 (secure serialization)
+  * Maintainability: 0.90 (modular design)
+- Recommendations:
+  * Add connection timeout configuration (→ S-grade)
+  * Consider adding metrics/monitoring
+- Evolution: Cycle 1 saved
+
+Next iteration: Apply recommendations → S-grade
+```
+
+## Version
+
+**v1.0.0** - Production Release (2025-11-17)
+
+Built on Sovereign Core v1.0.0

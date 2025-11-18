@@ -1,0 +1,80 @@
+---
+name: sovereign-refactor
+description: Meta-cognitive code refactoring with architectural quality tracking. Uses Sovereign Core to refactor with 5D quality measurement (Simplicity, Cohesion, Coupling, Testability, Performance), systematic improvements, and evolution toward S-grade architecture. Use when user requests refactoring, code cleanup, architectural improvements, or says "리팩토링", "코드 개선", "구조 정리".
+---
+
+# Sovereign Refactor v1.0.0
+
+## Purpose
+
+Systematic code refactoring with **meta-cognitive architectural awareness**. Every refactoring is measured across 5 dimensions, ensuring improvements are quantified and tracked toward S-grade code quality.
+
+## When to Use
+
+- Code cleanup requests
+- Architectural improvements
+- Technical debt reduction
+- Performance optimization
+- Maintainability enhancement
+
+## Quality Dimensions (5D)
+
+**Formula**: Q = 0.30×Simplicity + 0.25×Cohesion + 0.20×Coupling + 0.15×Testability + 0.10×Performance
+
+1. **Simplicity (30%)**: Reduced complexity, clearer logic
+2. **Cohesion (25%)**: High cohesion within modules
+3. **Coupling (20%)**: Low coupling between modules
+4. **Testability (15%)**: Easier to test, better coverage
+5. **Performance (10%)**: No performance regression
+
+## Workflow Example
+
+```
+User: "이 레거시 코드 리팩토링해줘"
+
+Claude (Meta-Cognitive Refactoring):
+
+[1. ANALYSIS]
+Current state:
+- Cyclomatic complexity: 25 (high)
+- Module coupling: High
+- Test coverage: 45%
+Complexity: 0.72 (high)
+
+[2. POLICY]
+Mode: BALANCED
+Strategy: [analyze, plan, refactor, test, validate]
+
+[3. REFACTORING]
+Applied:
+- Extract methods (5 → 12 smaller functions)
+- Dependency injection (reduced coupling)
+- Add unit tests
+
+[4. QUALITY (Before → After)]
+- Simplicity: 0.45 → 0.88 ✓ (+95% improvement!)
+- Cohesion: 0.60 → 0.90 ✓
+- Coupling: 0.75 → 0.15 ✓ (inverted metric)
+- Testability: 0.45 → 0.92 ✓
+- Performance: 0.85 → 0.87 ✓
+
+Grade: C → A (0.68 → 0.90)
+
+[5. EVOLUTION]
+Improvement: +32% quality
+Pattern learned: "High complexity + low coverage → extract methods strategy"
+```
+
+## Evolution Example
+
+```
+Cycle 3: Refactoring Expertise Gained
+- Pattern: Large classes → Extract smaller services
+- Auto-suggest: Dependency injection for high coupling
+- Success rate: 94% on similar code
+- Time reduction: 50% (4 hours → 2 hours)
+```
+
+## Version
+
+**v1.0.0** - Production Release (2025-11-17)

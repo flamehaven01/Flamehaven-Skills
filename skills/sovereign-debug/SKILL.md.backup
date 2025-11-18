@@ -1,0 +1,85 @@
+---
+name: sovereign-debug
+description: Meta-cognitive debugging with root cause analysis and quality-tracked fixes. Uses Sovereign Core to debug with 5D quality measurement (Root Cause Accuracy, Fix Effectiveness, Regression Risk, Time Efficiency, Learning), pattern recognition, and evolution tracking. Use when user reports bugs, errors, failures, or says "버그 고쳐줘", "에러 해결", "디버깅".
+---
+
+# Sovereign Debug v1.0.0
+
+## Purpose
+
+Intelligent debugging with **meta-cognitive root cause analysis**. Every debug session is measured across 5 dimensions, learning from patterns, and evolving toward S-grade debugging expertise.
+
+## When to Use
+
+- User reports bugs or errors
+- Intermittent failures
+- Performance issues
+- Memory leaks
+- Race conditions
+
+## Quality Dimensions (5D)
+
+**Formula**: Q = 0.30×Root Cause + 0.25×Fix + 0.20×Regression + 0.15×Time + 0.10×Learning
+
+1. **Root Cause Accuracy (30%)**: Correctly identified actual cause
+2. **Fix Effectiveness (25%)**: Problem fully resolved
+3. **Regression Risk (20%)**: Low chance of introducing new bugs
+4. **Time Efficiency (15%)**: Fast resolution
+5. **Learning (10%)**: Knowledge captured for future
+
+## Workflow Example
+
+```
+User: "이 함수가 간헐적으로 실패해"
+
+Claude (Meta-Cognitive Debugging):
+
+[1. INTENT ANALYSIS]
+Type: Intermittent failure
+Complexity: 0.85 (race condition likely)
+Impact: Production critical
+
+[2. POLICY]
+Mode: STRICT
+Strategy: [hypothesis, reproduce, fix, test, prevent]
+
+[3. ROOT CAUSE ANALYSIS]
+Hypothesis Ranking:
+1. Race condition (prob: 0.75) ← Most likely
+2. Memory leak (prob: 0.15)
+3. External dependency (prob: 0.10)
+
+[Verification: Race condition confirmed]
+
+[4. FIX + TEST]
+Applied: Threading lock + unit tests
+
+[5. QUALITY]
+- Root Cause Accuracy: 0.95 ✓
+- Fix Effectiveness: 0.92 ✓
+- Regression Risk: 0.12 (low) ✓
+- Time Efficiency: 0.88 ✓
+- Learning: 0.90 ✓
+
+Grade: A (0.91)
+
+[6. EVOLUTION]
+Pattern learned: "intermittent" + "async" → race condition
+Added to debug knowledge base
+
+Next: Similar cases auto-suggest threading analysis
+```
+
+## Evolution & Pattern Learning
+
+```
+Cycle 5: Race Condition Pattern Mastered
+- Auto-recognize: "intermittent" keyword → race condition check
+- Auto-suggest: Threading analysis tools
+- Confidence: 95% on similar cases
+- Time reduction: 70% (2 hours → 30 minutes)
+```
+
+## Version
+
+**v1.0.0** - Production Release (2025-11-17)
