@@ -1,0 +1,363 @@
+{
+  "skills_processed": 34,
+  "total_before_bytes": 293940,
+  "total_after_bytes": 27803,
+  "skills": [
+    {
+      "name": "brainstorming",
+      "before_bytes": 2617,
+      "after_bytes": 784,
+      "reduction_percent": 70.04203286205579,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "condition-based-waiting",
+      "before_bytes": 3869,
+      "after_bytes": 885,
+      "reduction_percent": 77.12587231842853,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "defense-in-depth",
+      "before_bytes": 4010,
+      "after_bytes": 640,
+      "reduction_percent": 84.03990024937656,
+      "references_created": [
+        "workflow.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "before_bytes": 6372,
+      "after_bytes": 915,
+      "reduction_percent": 85.64030131826742,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "executing-plans",
+      "before_bytes": 2352,
+      "after_bytes": 620,
+      "reduction_percent": 73.63945578231292,
+      "references_created": [
+        "workflow.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "before_bytes": 4450,
+      "after_bytes": 670,
+      "reduction_percent": 84.9438202247191,
+      "references_created": [
+        "workflow.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "receiving-code-review",
+      "before_bytes": 6320,
+      "after_bytes": 587,
+      "reduction_percent": 90.71202531645571,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "requesting-code-review",
+      "before_bytes": 2925,
+      "after_bytes": 385,
+      "reduction_percent": 86.83760683760684,
+      "references_created": [
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "root-cause-tracing",
+      "before_bytes": 5776,
+      "after_bytes": 964,
+      "reduction_percent": 83.31024930747922,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "sharing-skills",
+      "before_bytes": 4808,
+      "after_bytes": 518,
+      "reduction_percent": 89.22628951747087,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "subagent-driven-development",
+      "before_bytes": 5263,
+      "after_bytes": 903,
+      "reduction_percent": 82.84248527455824,
+      "references_created": [
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "systematic-debugging",
+      "before_bytes": 10283,
+      "after_bytes": 867,
+      "reduction_percent": 91.56860838276768,
+      "references_created": [
+        "workflow.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "test-driven-development",
+      "before_bytes": 10100,
+      "after_bytes": 798,
+      "reduction_percent": 92.0990099009901,
+      "references_created": [
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "testing-anti-patterns",
+      "before_bytes": 8706,
+      "after_bytes": 635,
+      "reduction_percent": 92.706179646221,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "testing-skills-with-subagents",
+      "before_bytes": 13132,
+      "after_bytes": 1487,
+      "reduction_percent": 88.67651538227231,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "using-git-worktrees",
+      "before_bytes": 5722,
+      "after_bytes": 703,
+      "reduction_percent": 87.7140859839217,
+      "references_created": [
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "using-superpowers",
+      "before_bytes": 4387,
+      "after_bytes": 391,
+      "reduction_percent": 91.08730339639845,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "verification-before-completion",
+      "before_bytes": 4340,
+      "after_bytes": 704,
+      "reduction_percent": 83.77880184331798,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "writing-plans",
+      "before_bytes": 3569,
+      "after_bytes": 1164,
+      "reduction_percent": 67.38582235920425,
+      "references_created": [
+        "algorithms.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "writing-skills",
+      "before_bytes": 21441,
+      "after_bytes": 1347,
+      "reduction_percent": 93.71764376661537,
+      "references_created": [
+        "governance.md"
+      ]
+    },
+    {
+      "name": "academic-writing",
+      "before_bytes": 8198,
+      "after_bytes": 665,
+      "reduction_percent": 91.88826543059282,
+      "references_created": [
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "drift-free-writing",
+      "before_bytes": 10275,
+      "after_bytes": 894,
+      "reduction_percent": 91.2992700729927,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "structured-output",
+      "before_bytes": 17054,
+      "after_bytes": 752,
+      "reduction_percent": 95.59047730737656,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "document-quality",
+      "before_bytes": 16603,
+      "after_bytes": 930,
+      "reduction_percent": 94.39860266216948,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "drift-detection",
+      "before_bytes": 5278,
+      "after_bytes": 839,
+      "reduction_percent": 84.10382720727549,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "principle-validation",
+      "before_bytes": 12124,
+      "after_bytes": 875,
+      "reduction_percent": 92.78290993071595,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "self-validation",
+      "before_bytes": 2590,
+      "after_bytes": 716,
+      "reduction_percent": 72.35521235521236,
+      "references_created": [
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "intent-classification",
+      "before_bytes": 11541,
+      "after_bytes": 836,
+      "reduction_percent": 92.756260289403,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "philosophical-reasoning",
+      "before_bytes": 24267,
+      "after_bytes": 1071,
+      "reduction_percent": 95.5865990851774,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "strategic-consulting",
+      "before_bytes": 8563,
+      "after_bytes": 887,
+      "reduction_percent": 89.64148078944295,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "fact-checking",
+      "before_bytes": 4355,
+      "after_bytes": 669,
+      "reduction_percent": 84.63834672789896,
+      "references_created": [
+        "workflow.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "sentiment-analysis",
+      "before_bytes": 9974,
+      "after_bytes": 928,
+      "reduction_percent": 90.69580910366955,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "subagent-coordination",
+      "before_bytes": 16108,
+      "after_bytes": 844,
+      "reduction_percent": 94.7603675192451,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    },
+    {
+      "name": "policy-driven-coding",
+      "before_bytes": 16568,
+      "after_bytes": 930,
+      "reduction_percent": 94.38676967648479,
+      "references_created": [
+        "workflow.md",
+        "algorithms.md",
+        "examples.md",
+        "governance.md"
+      ]
+    }
+  ],
+  "reduction_percent": 90.54126692522284
+}
